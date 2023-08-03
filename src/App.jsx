@@ -13,7 +13,7 @@ function App() {
     flex flex-wrap">
         
         <Navbar/>
-        <div className="w-11/12 bg-slate-100">
+        <div className="w-11/12 bg-slate-100 flex flex-col items-center">
           <Header nameWork="Irarrázaval"/>
           <MainContainer/>
         </div>
