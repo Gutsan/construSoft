@@ -1,4 +1,4 @@
-import { Flex } from "@tremor/react";
+import { Flex, Grid } from "@tremor/react";
 
 import { CardCantNc } from "./CardCantNc";
 import { CardTratamiento } from "./CardTratamiento";
@@ -6,7 +6,7 @@ import { CardTratamiento } from "./CardTratamiento";
 function MainContainer() {
   return (
     <div className="mainContainer w-11/12">
-      <Flex className="gap-3 min-w-3/4">
+      <Grid numItems={1} numItemsSm={2} numItemsLg={3} className="gap-3 min-w-3/4">
         <CardCantNc className="w-2/5 h-12" />
         <CardTratamiento
           className="w-1/5 h-12"
@@ -14,19 +14,8 @@ function MainContainer() {
           qty="228"
           kpi="89%"
         />
-        <CardTratamiento
-          className="w-1/5 h-12"
-          treatment="Eliminación"
-          qty="2"
-          kpi="1%"
-        />
-        <CardTratamiento
-          className="w-1/5 h-12"
-          treatment="Bajo Concesión"
-          qty="25"
-          kpi="10%"
-        />
-      </Flex>
+        
+      </Grid>
     </div>
   );
 }
