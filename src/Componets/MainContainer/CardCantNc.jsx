@@ -7,14 +7,14 @@ import {
   CategoryBar,
   Legend,
 } from "@tremor/react";
+import { ItemMetric } from "./ItemMetric";
 
 export function CardCantNc() {
   return (
     <>
-      <Card className="w-80 bg-teal-50" decoration="top" decorationColor="gray">
-        <Text>Total NC</Text>
-        <Flex>
-          <Metric>273</Metric>
+      <Card className="bg-teal-50" decoration="top" decorationColor="teal">
+         <Flex>
+         <ItemMetric titleMetric="Total NC" numMetric="273" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

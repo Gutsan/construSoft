@@ -1,30 +1,18 @@
-import {
-  Card,
-  Metric,
-  Text,
-  CategoryBar,
-  Flex,
-  Legend,
-} from "@tremor/react";
+import { Card, Metric, Text, CategoryBar, Flex, Legend } from "@tremor/react";
+import { ItemMetric } from "./ItemMetric";
 
 export function CardTratamiento({ treatment, qty, kpi }) {
   return (
     <>
-      <Card className="w-96 min-w-min bg-sky-50" decoration="top" decorationColor="sky">
-        {" "}
+      <Card
+        className="min-w-min bg-sky-50"
+        decoration="top"
+        decorationColor="sky"
+      >
         <Flex>
-          <div>
-            <Text>Reparación</Text>
-            <Metric>231</Metric>
-          </div>
-          <div>
-            <Text>Eliminación</Text>
-            <Metric>2</Metric>
-          </div>
-          <div>
-            <Text>Autorización</Text>
-            <Metric>25</Metric>
-          </div>
+          <ItemMetric titleMetric="Reparación" numMetric="231" />
+          <ItemMetric titleMetric="Eliminación" numMetric="2" />
+          <ItemMetric titleMetric="Autorización" numMetric="25" />
         </Flex>
         <CategoryBar
           values={[231, 2, 25]}
@@ -33,7 +21,7 @@ export function CardTratamiento({ treatment, qty, kpi }) {
         />
         <Legend
           className="mt-3"
-          categories={["Reparación", "Eliminación","Autorización"]}
+          categories={["Reparación", "Eliminación", "Autorización"]}
           colors={["lime", "red", "cyan"]}
         />
       </Card>
